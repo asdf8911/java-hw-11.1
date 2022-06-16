@@ -3,11 +3,13 @@ package ru.netology.manager;
 import ru.netology.domain.PosterItem;
 
 public class MovieManager {
-//    MovieManager manager = new MovieManager();
+    //    MovieManager manager = new MovieManager();
     private PosterItem[] items = new PosterItem[0];
     private int maxLimit = 10;
+
     public MovieManager() { // конструктор по умолчанию
     }
+
     public MovieManager(int maxLimit) { // конструктор для указания максимального лимита отображения
         this.maxLimit = maxLimit;
     }
@@ -15,7 +17,7 @@ public class MovieManager {
     public void add(PosterItem item) {
         PosterItem[] tmp = new PosterItem[items.length + 1];
         for (int i = 0; i < items.length; i++) {
-            tmp[i] = items [i];
+            tmp[i] = items[i];
         }
         tmp[tmp.length - 1] = item;
         items = tmp;
