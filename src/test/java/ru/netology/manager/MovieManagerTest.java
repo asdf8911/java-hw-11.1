@@ -15,7 +15,7 @@ public class MovieManagerTest {
     PosterItem five = new PosterItem("Человек-невидимка", "ужасы");
 
     @Test
-    public void myTest() {
+    public void shouldFindAll() {
         MovieManager manager = new MovieManager();
 
         manager.add(one);
@@ -31,7 +31,7 @@ public class MovieManagerTest {
     }
 
     @Test
-    public void myTest2() {
+    public void shouldFindLast() {
         MovieManager manager = new MovieManager();
 
         manager.add(one);

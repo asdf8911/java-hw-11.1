@@ -3,7 +3,6 @@ package ru.netology.manager;
 import ru.netology.domain.PosterItem;
 
 public class MovieManager {
-    //    MovieManager manager = new MovieManager();
     private PosterItem[] items = new PosterItem[0];
     private int maxLimit = 10;
 
@@ -29,19 +28,16 @@ public class MovieManager {
 
     public PosterItem[] findLast() {
 
-        int resultLength = 5;
-        if (resultLength < this.maxLimit) {
-            resultLength = resultLength;
-        } else {
+        int resultLength = items.length;
+        if (resultLength > this.maxLimit) {
             resultLength = maxLimit;
         }
-//      PosterItem[] items = manager.findAll();
+
         PosterItem[] result = new PosterItem[resultLength];
         for (int i = 0; i < result.length; i++) {
             int index = items.length - i - 1;
             result[i] = items[index];
         }
         return result;
-
     }
 }
